@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HealWell Physiotherapy — Pune's Trusted Pain Relief Clinic</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --emerald: #10b981;
+    --emerald-dark: #059669;
+    --emerald-light: #d1fae5;
+    --cream: #fefce8;
+    --dark: #1a2e1a;
+    --text: #374151;
+    --light: #f0fdf4;
+  }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: #fff; }
+
+  /* NAV */
+  nav { background: #fff; border-bottom: 2px solid var(--emerald); padding: 0 5%; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-icon { width: 42px; height: 42px; background: var(--emerald); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+  .logo-text { font-size: 1.3rem; font-weight: 700; color: var(--dark); }
+  .logo-text span { color: var(--emerald); }
+  nav a { color: var(--dark); text-decoration: none; font-weight: 500; margin-left: 28px; font-size: 0.9rem; }
+  nav a:hover { color: var(--emerald); }
+  .nav-cta { background: var(--emerald); color: #fff !important; padding: 10px 22px; border-radius: 25px; margin-left: 20px !important; }
+  .nav-cta:hover { background: var(--emerald-dark) !important; }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, var(--dark) 0%, #2d4a2d 50%, #1a3a1a 100%); color: #fff; padding: 80px 5% 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: 500px; }
+  .hero-badge { display: inline-block; background: var(--emerald); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 20px; }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+  .hero h1 span { color: var(--emerald); }
+  .hero p { font-size: 1.1rem; opacity: 0.85; line-height: 1.7; margin-bottom: 30px; }
+  .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; }
+  .btn-primary { background: var(--emerald); color: #fff; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: all 0.3s; }
+  .btn-primary:hover { background: var(--emerald-dark); transform: translateY(-2px); }
+  .btn-outline { border: 2px solid rgba(255,255,255,0.5); color: #fff; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s; }
+  .btn-outline:hover { border-color: var(--emerald); background: rgba(16,185,129,0.1); }
+  .hero-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 35px; backdrop-filter: blur(10px); }
+  .hero-card h3 { font-size: 1.1rem; color: var(--emerald); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-item { text-align: center; padding: 18px; background: rgba(255,255,255,0.05); border-radius: 12px; }
+  .stat-num { font-size: 2rem; font-weight: 800; color: var(--emerald); }
+  .stat-label { font-size: 0.75rem; opacity: 0.7; margin-top: 4px; }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--emerald); color: #fff; padding: 18px 5%; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 600; }
+
+  /* CONDITIONS */
+  .conditions { padding: 80px 5%; background: var(--light); }
+  .conditions h2 { text-align: center; font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+  .conditions .subtitle { text-align: center; color: #6b7280; max-width: 600px; margin: 0 auto 50px; font-size: 1rem; }
+  .conditions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .condition-card { background: #fff; border-radius: 16px; padding: 25px 20px; text-align: center; border: 2px solid transparent; transition: all 0.3s; cursor: pointer; }
+  .condition-card:hover { border-color: var(--emerald); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(16,185,129,0.15); }
+  .condition-icon { font-size: 2.5rem; margin-bottom: 12px; }
+  .condition-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+  .condition-card p { font-size: 0.78rem; color: #6b7280; }
+
+  /* SERVICES */
+  .services { padding: 80px 5%; background: #fff; }
+  .services h2 { text-align: center; font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 50px; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+  .service-card { background: var(--light); border-radius: 16px; padding: 30px; border-left: 4px solid var(--emerald); transition: all 0.3s; }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(16,185,129,0.12); background: #fff; }
+  .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+  .service-card p { font-size: 0.88rem; color: #6b7280; line-height: 1.6; }
+  .service-tag { display: inline-block; background: var(--emerald-light); color: var(--emerald-dark); padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
+
+  /* DR PROFILE */
+  .dr-section { padding: 80px 5%; background: var(--dark); color: #fff; }
+  .dr-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center; }
+  .dr-avatar { width: 180px; height: 180px; background: var(--emerald); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 5rem; margin: 0 auto; }
+  .dr-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+  .dr-title { color: var(--emerald); font-size: 1rem; margin-bottom: 20px; }
+  .dr-section p { opacity: 0.85; line-height: 1.7; margin-bottom: 20px; }
+  .quals { display: flex; flex-wrap: wrap; gap: 10px; }
+  .qual-badge { background: rgba(16,185,129,0.2); border: 1px solid var(--emerald); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; }
+
+  /* PROCESS */
+  .process { padding: 80px 5%; background: var(--light); }
+  .process h2 { text-align: center; font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 50px; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+  .step { background: #fff; border-radius: 16px; padding: 30px; text-align: center; position: relative; }
+  .step-num { width: 50px; height: 50px; background: var(--emerald); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 18px; }
+  .step h4 { font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+  .step p { font-size: 0.85rem; color: #6b7280; line-height: 1.6; }
+
+  /* TESTIMONIALS */
+  .testimonials { padding: 80px 5%; background: #fff; }
+  .testimonials h2 { text-align: center; font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 50px; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+  .testimonial { background: var(--light); border-radius: 16px; padding: 28px; border-top: 3px solid var(--emerald); }
+  .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; }
+  .testimonial p { font-size: 0.9rem; line-height: 1.7; color: var(--text); margin-bottom: 15px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-avatar { width: 40px; height: 40px; background: var(--emerald); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.9rem; }
+  .author-info .name { font-weight: 700; font-size: 0.9rem; color: var(--dark); }
+  .author-info .detail { font-size: 0.78rem; color: #6b7280; }
+
+  /* BOOKING */
+  .booking { padding: 80px 5%; background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%); color: #fff; text-align: center; }
+  .booking h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; }
+  .booking p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 35px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .booking-options { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
+  .booking-btn { background: #fff; color: var(--emerald-dark); padding: 16px 35px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 1rem; transition: all 0.3s; }
+  .booking-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  .booking-btn.outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.8); }
+  .booking-note { font-size: 0.85rem; opacity: 0.75; }
+
+  /* FOOTER */
+  footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 40px 5%; text-align: center; }
+  footer p { margin-bottom: 8px; font-size: 0.9rem; }
+  footer strong { color: var(--emerald); }
+  .footer-links { display: flex; justify-content: center; gap: 25px; margin-top: 15px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; }
+  .footer-links a:hover { color: var(--emerald); }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; gap: 30px; padding: 50px 5%; }
+    .hero h1 { font-size: 2rem; }
+    .dr-inner { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .trust-bar { gap: 20px; }
+    .booking h2 { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">🌿</div>
+    <div class="logo-text">Heal<span>Well</span> Physio</div>
+  </div>
+  <div>
+    <a href="#conditions">Conditions</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#book" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <span class="hero-badge">🌿 HOLISTIC PHYSIOTHERAPY — PUNE</span>
+    <h1>Move Better.<br>Live <span>Pain-Free.</span><br>Feel Whole Again.</h1>
+    <p>Pune's most trusted physiotherapy clinic. Evidence-based treatment combined with holistic wellness for lasting recovery — not just pain relief.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-primary">📅 Book Assessment</a>
+      <a href="tel:+912012345678" class="btn-outline">📞 Call Now</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <h3>Our Results Speak</h3>
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-num">3,200+</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">94%</div>
+        <div class="stat-label">Recovery Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4.9★</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8 Yrs</div>
+        <div class="stat-label">Pune Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">✅ Certified Physiotherapists</div>
+  <div class="trust-item">✅ Same-Day Appointments</div>
+  <div class="trust-item">✅ Insurance Accepted</div>
+  <div class="trust-item">✅ Home Visit Available</div>
+</div>
+
+<!-- CONDITIONS -->
+<section class="conditions" id="conditions">
+  <h2>We Treat All Pain Conditions</h2>
+  <p class="subtitle">From acute injuries to chronic conditions — our specialists have seen it all</p>
+  <div class="conditions-grid">
+    <div class="condition-card">
+      <div class="condition-icon">🦴</div>
+      <h4>Back & Neck Pain</h4>
+      <p>Disc problems, cervical spondylosis, lumbar pain</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">🦵</div>
+      <h4>Knee Problems</h4>
+      <p>ACL injury, meniscus tears, arthritis, runner's knee</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">💪</div>
+      <h4>Shoulder Pain</h4>
+      <p>Rotator cuff, frozen shoulder, impingement</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">🤸</div>
+      <h4>Sports Injuries</h4>
+      <p>Sprains, strains, overuse injuries, rehab</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">🖐️</div>
+      <h4>Wrist & Elbow</h4>
+      <p>Tennis elbow, carpal tunnel, golfer's elbow</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">🧠</div>
+      <h4>Neuro Conditions</h4>
+      <p>Stroke rehab, Parkinson's, sciatica, neuropathy</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">🚶</div>
+      <h4>Posture Issues</h4>
+      <p>Scoliosis, kyphosis, desk-related problems</p>
+    </div>
+    <div class="condition-card">
+      <div class="condition-icon">👴</div>
+      <h4>Geriatric Care</h4>
+      <p>Fall prevention, balance, senior mobility programs</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <h2>Our Treatment Methods</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Manual Therapy</h3>
+      <p>Hands-on techniques to restore joint mobility, reduce muscle tension, and improve tissue flexibility for lasting pain relief.</p>
+      <span class="service-tag">Most Popular</span>
+    </div>
+    <div class="service-card">
+      <h3>Dry Needling</h3>
+      <p>Precise trigger point therapy using fine needles to release deep muscle knots and chronic pain patterns that won't respond to other treatments.</p>
+      <span class="service-tag">Advanced</span>
+    </div>
+    <div class="service-card">
+      <h3>Therapeutic Exercise</h3>
+      <p>Personalised movement programs to rebuild strength, improve flexibility, and prevent re-injury — your long-term solution.</p>
+      <span class="service-tag">Core Program</span>
+    </div>
+    <div class="service-card">
+      <h3>Ultrasound Therapy</h3>
+      <p>Deep tissue healing using therapeutic ultrasound waves to accelerate tissue repair and reduce inflammation safely.</p>
+      <span class="service-tag">Technology-Assisted</span>
+    </div>
+    <div class="service-card">
+      <h3>TENS & Electrotherapy</h3>
+      <p>Electrical stimulation for pain management, muscle re-education, and accelerated recovery post-surgery or injury.</p>
+      <span class="service-tag">Pain Relief</span>
+    </div>
+    <div class="service-card">
+      <h3>Sports Rehabilitation</h3>
+      <p>Return-to-sport programs for athletes. Performance testing, injury prevention screens, and sport-specific conditioning protocols.</p>
+      <span class="service-tag">Athletes</span>
+    </div>
+  </div>
+</section>
+
+<!-- DR PROFILE -->
+<section class="dr-section" id="about">
+  <div class="dr-inner">
+    <div style="text-align:center">
+      <div class="dr-avatar">👩‍⚕️</div>
+      <div style="margin-top:20px; color: rgba(255,255,255,0.6); font-size:0.85rem;">Lead Physiotherapist</div>
+    </div>
+    <div>
+      <h2>Dr. Priya Verma, MPT</h2>
+      <div class="dr-title">Lead Physiotherapist & Clinic Director</div>
+      <p>With over 8 years of clinical experience in Pune, Dr. Priya Verma believes every patient deserves a thorough assessment and personalised treatment — not a one-size-fits-all approach. She trained at Seth GS Medical College, Mumbai, and completed her Masters in Musculoskeletal Physiotherapy.</p>
+      <p>She has treated thousands of patients — from corporate professionals with desk pain to competitive athletes needing post-surgical rehab. Her philosophy: treat the root cause, not just the symptom.</p>
+      <div class="quals">
+        <span class="qual-badge">MPT Musculoskeletal</span>
+        <span class="qual-badge">Certified Dry Needling</span>
+        <span class="qual-badge">Sports Physio Certified</span>
+        <span class="qual-badge">Neuro Rehab Specialist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <h2>How We Help You Recover</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Full Body Assessment</h4>
+      <p>45-minute comprehensive evaluation — posture, movement, strength, and pain patterns. We find the real cause.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Custom Treatment Plan</h4>
+      <p>A personalised protocol designed specifically for your condition, lifestyle, and recovery goals.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Hands-On Treatment</h4>
+      <p>Direct therapy sessions combining manual work, modalities, and guided exercise for maximum results.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Long-Term Prevention</h4>
+      <p>Home program, ergonomic guidance, and lifestyle modifications so you never come back for the same problem.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Our Patients Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"I had chronic lower back pain for 3 years. After 6 sessions at HealWell, I'm 90% pain-free. Dr. Priya's assessment was the most thorough I've ever had — she actually found the cause."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RS</div>
+        <div class="author-info">
+          <div class="name">Rohit Sharma</div>
+          <div class="detail">IT Professional, Kothrud</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Had a knee ligament injury from football. Their sports rehab program was incredible — I was back on the field in 10 weeks, stronger than before. Best physiotherapy clinic in Pune."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AP</div>
+        <div class="author-info">
+          <div class="name">Arjun Pawar</div>
+          <div class="detail">Football Player, Baner</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"After my mother's stroke, we were worried about her mobility. The neuro rehab program here gave her confidence back. She's walking independently now. Forever grateful."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SK</div>
+        <div class="author-info">
+          <div class="name">Sneha Kulkarni</div>
+          <div class="detail">Family Member, Aundh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <h2>Ready to Live Pain-Free?</h2>
+  <p>Book your comprehensive assessment today. Same-day appointments available.</p>
+  <div class="booking-options">
+    <a href="https://wa.me/912012345678?text=Hi,%20I%20want%20to%20book%20a%20physiotherapy%20assessment" class="booking-btn">📱 WhatsApp Us</a>
+    <a href="tel:+912012345678" class="booking-btn outline">📞 020-1234-5678</a>
+  </div>
+  <p class="booking-note">📍 HealWell Physio, Near Aundh-Baner Road, Pune — Mon–Sat: 8AM–8PM | Sun: 9AM–2PM</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>HealWell Physiotherapy Clinic</strong> | Pune, Maharashtra</p>
+  <p>📞 020-1234-5678 | 📧 care@healwellphysio.in</p>
+  <p style="margin-top:12px; font-size:0.8rem;">This is a demonstration website created by Invictus AI for prospective clients. <a href="https://invictus-ai.in" style="color: var(--emerald);">Learn more →</a></p>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms</a>
+    <a href="#">Sitemap</a>
+  </div>
+</footer>
+
+</body>
+</html>
