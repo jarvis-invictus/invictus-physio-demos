@@ -21,7 +21,7 @@
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
   },
-  "url": "https://invictus-ai.in",
+  "url": "https://invictus-physio-demos.vercel.app/02-sports-rehab/",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.5",
@@ -246,7 +246,7 @@
     .injuries-grid, .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
     .process-steps { grid-template-columns: repeat(2, 1fr); }
     .stat-row { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
+    .nav-links { display: none; } #mob-toggle-02sportsrehab { display: block !important; }
   }
 </style>
 
@@ -256,6 +256,9 @@
 <!-- NAV -->
 <nav>
   <div class="logo">Flex<span>Forward</span> Physio</div>
+  <button id="mob-toggle-02sportsrehab" onclick="var nl=document.querySelector('.nav-links');nl.style.display=nl.style.display==='flex'?'none':'flex';nl.style.flexDirection='column';nl.style.position='absolute';nl.style.top='100%';nl.style.left='0';nl.style.right='0';nl.style.background='white';nl.style.padding='1rem';nl.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';nl.style.zIndex='50';" style="display:none;padding:8px;cursor:pointer;" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
   <ul class="nav-links">
     <li><a href="#injuries">Injuries</a></li>
     <li><a href="#services">Services</a></li>

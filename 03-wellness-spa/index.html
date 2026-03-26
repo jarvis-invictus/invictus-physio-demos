@@ -22,7 +22,7 @@
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
   },
-  "url": "https://invictus-ai.in",
+  "url": "https://invictus-physio-demos.vercel.app/03-wellness-spa/",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.6",
@@ -206,6 +206,13 @@
     .trust-bar { gap: 20px; }
     .booking h2 { font-size: 2rem; }
   }
+
+  @media(max-width:768px){
+    #mob-links-03wellnessspa { display:none; }
+    #mob-links-03wellnessspa.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.1); z-index:50; }
+    #mob-links-03wellnessspa.show a { margin:0; padding:8px 0; border-bottom:1px solid #eee; color:#333; }
+    #mob-btn-03wellnessspa { display:block!important; }
+  }
 </style>
 
 </head>
@@ -218,10 +225,10 @@
     <div class="logo-text">Heal<span>Well</span> Physio</div>
   </div>
   <div>
-    <a href="#conditions">Conditions</a>
+    <button id="mob-btn-03wellnessspa" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-03wellnessspa').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div id="mob-links-03wellnessspa" style="display:flex;align-items:center;"><a href="#conditions">Conditions</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a href="#book" class="nav-cta">Book Now</a>
+    <a href="#book" class="nav-cta">Book Now</a></div>
   </div>
 </nav>
 
@@ -500,7 +507,7 @@
 <footer>
   <p><strong>HealWell Physiotherapy Clinic</strong> | Pune, Maharashtra</p>
   <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 020-1234-5678 | <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline-block;vertical-align:middle;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> care@healwellphysio.in</p>
-  <p style="margin-top:12px; font-size:0.8rem;">This is a demonstration website created by Invictus AI for prospective clients. <a href="https://invictus-ai.in" style="color: var(--emerald);">Learn more →</a></p>
+  <p style="margin-top:12px; font-size:0.8rem;">This is a demonstration website created by Invictus AI for prospective clients. <a href="https://invictus-physio-demos.vercel.app/03-wellness-spa/" style="color: var(--emerald);">Learn more →</a></p>
   <div class="footer-links">
     <a href="#">Privacy Policy</a>
     <a href="#">Terms</a>

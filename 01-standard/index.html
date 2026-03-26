@@ -21,10 +21,10 @@
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
   },
-  "url": "https://invictus-ai.in",
+  "url": "https://invictus-physio-demos.vercel.app/01-standard/",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
+    "ratingValue": "4.9",
     "reviewCount": "312"
   },
   "geo": {
@@ -739,7 +739,7 @@
     .location-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .hero h2 { font-size: 1.8rem; }
-    .nav-links { display: none; }
+    .nav-links { display: none; } #mob-toggle-01standard { display: block !important; }
     .trust-bar { gap: 20px; }
   }
 </style>
@@ -757,6 +757,9 @@
       <p>Physiotherapy Clinic · Pune</p>
     </div>
   </div>
+  <button id="mob-toggle-01standard" onclick="var nl=document.querySelector('.nav-links');nl.style.display=nl.style.display==='flex'?'none':'flex';nl.style.flexDirection='column';nl.style.position='absolute';nl.style.top='100%';nl.style.left='0';nl.style.right='0';nl.style.background='white';nl.style.padding='1rem';nl.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';nl.style.zIndex='50';" style="display:none;padding:8px;cursor:pointer;" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
   <ul class="nav-links">
     <li><a href="#">Services</a></li>
     <li><a href="#">Our Team</a></li>
