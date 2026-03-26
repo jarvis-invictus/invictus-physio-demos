@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlexForward Physiotherapy | Sports Injury & Rehabilitation Clinic Pune</title>
+<meta name="description" content="Pune's top sports physiotherapy clinic. Expert treatment for sports injuries, ACL tears, shoulder pain, and performance rehab. Get back to peak form in record time.">
+<style>
+  :root {
+    --orange: #F45C2D;
+    --orange-light: #FF7A4F;
+    --dark: #1A1A2E;
+    --dark2: #16213E;
+    --white: #FFFFFF;
+    --gray: #6B7280;
+    --light: #F9FAFB;
+    --accent: #FFE0D4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; color: var(--dark); line-height: 1.6; }
+  
+  /* NAV */
+  nav {
+    background: var(--dark);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { color: var(--orange); font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; }
+  .logo span { color: var(--white); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: #CBD5E1; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta { background: var(--orange); color: white; padding: 0.6rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark2) 60%, #0F3460 100%);
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(244,92,45,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .hero-badge { display: inline-block; background: rgba(244,92,45,0.2); color: var(--orange); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; border: 1px solid rgba(244,92,45,0.3); }
+  .hero h1 { font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+  .hero h1 span { color: var(--orange); }
+  .hero p { color: #94A3B8; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.8; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--orange); color: white; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-secondary { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.3); }
+  .hero-visual { display: flex; flex-direction: column; gap: 1rem; }
+  .stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(10px); }
+  .stat-card .num { font-size: 2.5rem; font-weight: 900; color: var(--orange); }
+  .stat-card .label { color: #94A3B8; font-size: 0.9rem; margin-top: 0.2rem; }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--orange); padding: 1.5rem 2rem; }
+  .trust-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+  .trust-item { display: flex; align-items: center; gap: 0.8rem; color: white; }
+  .trust-item .icon { font-size: 1.5rem; }
+  .trust-item strong { font-size: 1.1rem; display: block; }
+  .trust-item span { font-size: 0.8rem; opacity: 0.85; }
+
+  /* SECTION COMMON */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag { color: var(--orange); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .section-title { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 1rem; }
+  .section-sub { color: var(--gray); font-size: 1.05rem; max-width: 600px; }
+
+  /* SPORTS INJURIES */
+  .injuries { background: var(--light); }
+  .injuries-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .injury-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 15px rgba(0,0,0,0.06); border-top: 4px solid var(--orange); }
+  .injury-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .injury-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .injury-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
+  .injury-card .recovery { display: inline-block; background: var(--accent); color: var(--orange); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 20px; margin-top: 0.8rem; }
+
+  /* SERVICES */
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+  .service-item { display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.5rem; border-radius: 12px; background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+  .service-icon { width: 50px; height: 50px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+  .service-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .service-item p { color: var(--gray); font-size: 0.9rem; }
+
+  /* ABOUT / DOCTOR */
+  .about { background: var(--dark); color: white; }
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .about .section-title { color: white; }
+  .about .section-sub { color: #94A3B8; }
+  .doctor-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; }
+  .doctor-name { font-size: 1.5rem; font-weight: 800; color: white; }
+  .doctor-title { color: var(--orange); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .cred-list { list-style: none; }
+  .cred-list li { padding: 0.5rem 0; color: #CBD5E1; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; gap: 0.5rem; }
+  .cred-list li:last-child { border-bottom: none; }
+  .about-points { display: flex; flex-direction: column; gap: 1.5rem; }
+  .about-point { display: flex; gap: 1rem; align-items: flex-start; }
+  .about-point .dot { width: 40px; height: 40px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+  .about-point h4 { color: white; font-weight: 700; margin-bottom: 0.3rem; }
+  .about-point p { color: #94A3B8; font-size: 0.9rem; }
+
+  /* PROCESS */
+  .process { background: var(--light); }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; position: relative; }
+  .process-steps::before { content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: linear-gradient(to right, var(--orange), transparent); z-index: 0; }
+  .step { text-align: center; position: relative; z-index: 1; }
+  .step-num { width: 60px; height: 60px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 900; margin: 0 auto 1rem; }
+  .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .step p { color: var(--gray); font-size: 0.85rem; }
+
+  /* TESTIMONIALS */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .testimonial-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 15px rgba(0,0,0,0.06); }
+  .stars { color: #F59E0B; font-size: 1.1rem; margin-bottom: 1rem; }
+  .testimonial-text { color: #374151; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+  .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--orange), var(--orange-light)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1rem; }
+  .author-name { font-weight: 700; font-size: 0.9rem; }
+  .author-detail { color: var(--gray); font-size: 0.8rem; }
+
+  /* BOOKING CTA */
+  .booking-cta { background: linear-gradient(135deg, var(--orange) 0%, #C73E1D 100%); padding: 4rem 2rem; text-align: center; color: white; }
+  .booking-cta h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; }
+  .booking-cta p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
+  .booking-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: white; color: var(--orange); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; }
+  .btn-outline-white { background: transparent; color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 2px solid rgba(255,255,255,0.6); }
+
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .contact-item .icon { width: 44px; height: 44px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+  .contact-item h4 { font-weight: 700; margin-bottom: 0.2rem; }
+  .contact-item p { color: var(--gray); font-size: 0.9rem; }
+  .map-placeholder { background: #E5E7EB; border-radius: 12px; height: 250px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 0.9rem; }
+  .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 999; }
+
+  /* FOOTER */
+  footer { background: var(--dark); color: #94A3B8; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  .footer-brand .logo { font-size: 1.3rem; margin-bottom: 1rem; display: block; }
+  .footer-brand p { font-size: 0.9rem; line-height: 1.7; }
+  footer h4 { color: white; font-size: 0.95rem; margin-bottom: 1rem; }
+  footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  footer ul li a { color: #94A3B8; text-decoration: none; font-size: 0.9rem; }
+  .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; font-size: 0.85rem; }
+
+  @media (max-width: 768px) {
+    .hero-inner, .about-inner, .contact-grid, .footer-inner { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+    .injuries-grid, .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Flex<span>Forward</span> Physio</div>
+  <ul class="nav-links">
+    <li><a href="#injuries">Injuries</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">Our Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919876543210?text=Hi+I+want+to+book+an+appointment+at+FlexForward+Physio" class="nav-cta">Book Session</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Pune's #1 Sports Physiotherapy</div>
+      <h1>Get Back to <span>Peak Performance</span> Faster</h1>
+      <p>Expert physiotherapy for athletes and active individuals. ACL tears, rotator cuff injuries, shin splints, tennis elbow — we've treated them all. Return to sport in record time.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/919876543210?text=Hi+I+want+to+book+a+sports+physio+assessment" class="btn-primary">Book Assessment</a>
+        <a href="#injuries" class="btn-secondary">View Treatments</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-card">
+        <div class="num">2,400+</div>
+        <div class="label">Athletes Treated & Returned to Sport</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="num">8+</div>
+          <div class="label">Years Sports Physio Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">94%</div>
+          <div class="label">Return-to-Sport Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      
+      <div><strong>AIPT Certified</strong><span>Advanced Sports Physio Credentials</span></div>
+    </div>
+    <div class="trust-item">
+      <span class="icon">⚡</span>
+      <div><strong>48-Hour Improvement</strong><span>Pain reduction guaranteed in first session</span></div>
+    </div>
+    <div class="trust-item">
+      
+      <div><strong>Sports Medicine Partner</strong><span>Pune Premier League, Deccan FC</span></div>
+    </div>
+    <div class="trust-item">
+      
+      <div><strong>Koregaon Park, Pune</strong><span>Open 7 Days, 7AM–9PM</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- INJURIES -->
+<section class="injuries" id="injuries">
+  <div class="section-inner">
+    <div class="section-tag">We Treat</div>
+    <h2 class="section-title">Common Sports Injuries We Fix</h2>
+    <p class="section-sub">From weekend warriors to professional athletes — we know exactly how to get you back on the field.</p>
+    <div class="injuries-grid">
+      <div class="injury-card">
+        <div class="service-icon-css" style="width:52px;height:52px;border-radius:50%;background:#F45C2D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">LEG</div>
+        <h3>ACL & Knee Injuries</h3>
+        <p>Pre and post-surgical ACL rehab, meniscus tears, patellar tendinitis, and knee pain from running or impact sports.</p>
+        <div class="recovery">Avg. Recovery: 6–8 weeks</div>
+      </div>
+      <div class="injury-card">
+        <div class="service-icon-css" style="width:52px;height:52px;border-radius:50%;background:#F45C2D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SHD</div>
+        <h3>Shoulder & Rotator Cuff</h3>
+        <p>Swimmer's shoulder, rotator cuff tears, shoulder impingement, and throwing-sport injuries (cricket, badminton, baseball).</p>
+        <div class="recovery">Avg. Recovery: 4–10 weeks</div>
+      </div>
+      <div class="injury-card">
+        <div class="service-icon-css" style="width:52px;height:52px;border-radius:50%;background:#F45C2D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">ANK</div>
+        <h3>Ankle & Foot Injuries</h3>
+        <p>Ankle sprains, Achilles tendinopathy, plantar fasciitis, and stress fractures common in runners and footballers.</p>
+        <div class="recovery">Avg. Recovery: 3–8 weeks</div>
+      </div>
+      <div class="injury-card">
+        <div class="service-icon-css" style="width:52px;height:52px;border-radius:50%;background:#F45C2D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">ELB</div>
+        <h3>Tennis & Golfer's Elbow</h3>
+        <p>Lateral and medial epicondylitis — affecting racquet sports, cricket, and repetitive overhead athletes.</p>
+        <div class="recovery">Avg. Recovery: 4–6 weeks</div>
+      </div>
+      <div class="injury-card">
+        <div class="service-icon-css" style="width:52px;height:52px;border-radius:50%;background:#F45C2D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">RUN</div>
+        <h3>Runner's Injuries</h3>
+        <p>IT band syndrome, shin splints, stress reactions, and biomechanical issues causing pain in distance runners.</p>
+        <div class="recovery">Avg. Recovery: 3–6 weeks</div>
+      </div>
+      <div class="injury-card">
+        <div class="service-icon-css" style="width:52px;height:52px;border-radius:50%;background:#F45C2D;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">NEU</div>
+        <h3>Concussion & Sports Head</h3>
+        <p>Return-to-sport protocol following concussion — cognitive and vestibular rehab for contact sport athletes.</p>
+        <div class="recovery">Protocol: 7-stage RTS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-tag">Our Services</div>
+    <h2 class="section-title">Evidence-Based Treatment Methods</h2>
+    <p class="section-sub">We use the latest sports science and hands-on techniques to speed your recovery.</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-icon" style="font-size:12px;font-weight:700;letter-spacing:.5px;">BIO</div>
+        <div>
+          <h3>Sports Biomechanics Assessment</h3>
+          <p>Full movement analysis to identify why you're injured — not just what hurts. Fix the root cause, prevent recurrence.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">⚡</div>
+        <div>
+          <h3>Dry Needling & IMS</h3>
+          <p>Intramuscular stimulation for deep muscle knots and trigger points. Dramatically accelerates healing in 1–2 sessions.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon" style="font-size:12px;font-weight:700;letter-spacing:.5px;">SWT</div>
+        <div>
+          <h3>Shockwave Therapy</h3>
+          <p>Non-invasive high-energy waves for chronic tendon injuries (Achilles, patellar, plantar fascia). Faster than surgery.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon" style="font-size:12px;font-weight:700;letter-spacing:.5px;">STR</div>
+        <div>
+          <h3>Strength & Conditioning Rehab</h3>
+          <p>Return stronger than before. Sport-specific strength programming from Week 1 to full return-to-competition.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon" style="font-size:12px;font-weight:700;letter-spacing:.5px;">PRF</div>
+        <div>
+          <h3>Performance Optimization</h3>
+          <p>Injury prevention screening and performance tuning for athletes preparing for tournaments, marathons, or seasons.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon" style="font-size:12px;font-weight:700;letter-spacing:.5px;">HMV</div>
+        <div>
+          <h3>Home Visit Physio</h3>
+          <p>Post-surgical patients and elderly athletes get professional physio at home. Same quality, zero travel stress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-inner">
+      <div class="about-points">
+        <div class="section-tag" style="color: var(--orange);">Our Expert</div>
+        <h2 class="section-title" style="color: white;">Led by a Sports Physio Who's Been on the Field</h2>
+        <div class="about-point">
+          <div class="dot">01</div>
+          <div>
+            <h4>Tournament-Level Experience</h4>
+            <p>Official physio for Deccan FC and multiple Pune marathon events. We know what competitive athletes need.</p>
+          </div>
+        </div>
+        <div class="about-point">
+          <div class="dot">02</div>
+          <div>
+            <h4>Research-Backed Protocols</h4>
+            <p>Every treatment protocol is based on the latest sports medicine research — not guesswork or outdated methods.</p>
+          </div>
+        </div>
+        <div class="about-point">
+          <div class="dot">03</div>
+          <div>
+            <h4>Outcome Tracking</h4>
+            <p>We measure your progress every session. You'll see exactly how far you've come and when you can return to sport.</p>
+          </div>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--orange), #C73E1D); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1rem;">DR</div>
+        <div class="doctor-name">Dr. Rahul Deshmukh</div>
+        <div class="doctor-title">MPTh (Sports) | AIPT Certified | 8+ Years</div>
+        <ul class="cred-list">
+          <li>Master's in Physiotherapy (Sports Medicine) — MAHE, Manipal</li>
+          <li>Advanced Diploma in Sports Injury Management</li>
+          <li>Certified Dry Needling Practitioner (DNFA, UK)</li>
+          <li>Shockwave Therapy Certified (EMS Switzerland)</li>
+          <li>Official Physio, Pune Premier League 2022–24</li>
+          <li>2,400+ athletes treated | 94% return-to-sport rate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-inner">
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <div class="section-tag" style="display: inline-block;">How It Works</div>
+    </div>
+    <h2 class="section-title" style="text-align: center;">Your Road Back to Sport — 4 Simple Stages</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Assessment</h3>
+        <p>60-min sports injury assessment + biomechanics analysis + movement screen</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Treatment Plan</h3>
+        <p>Personalized rehab plan with clear milestones and predicted return-to-sport timeline</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Active Rehab</h3>
+        <p>Hands-on treatment + strength sessions + home program — progressing every week</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Return to Sport</h3>
+        <p>Sport-specific drills, final clearance, and injury prevention plan for the future</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-inner">
+    <div class="section-tag">Patient Stories</div>
+    <h2 class="section-title">Athletes Who Came Back Stronger</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Tore my ACL playing football in October. Dr. Deshmukh had me back on the pitch by March — 5 months. Faster than any surgeon predicted. The strength program was exceptional."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div>
+            <div class="author-name">Akash Kulkarni</div>
+            <div class="author-detail">Football midfielder, Pune FC Academy</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Chronic Achilles pain for 2 years. Three physios couldn't fix it. FlexForward used shockwave therapy — 6 sessions and I ran my first marathon in January. Unbelievable."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PR</div>
+          <div>
+            <div class="author-name">Priya Ranade</div>
+            <div class="author-detail">Marathon runner, TCS Pune 10K finisher</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Rotator cuff injury threatened my badminton career. The biomechanics assessment identified a technique flaw I'd had for years. Fixed the injury AND my game improved!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div>
+            <div class="author-name">Siddharth More</div>
+            <div class="author-detail">State-level badminton player, Pune</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<div class="booking-cta">
+  <h2>Don't Sit Out the Season</h2>
+  <p>Every day without treatment is a day further from your return to sport. Book your assessment today.</p>
+  <div class="booking-btns">
+    <a href="https://wa.me/919876543210?text=Hi+I+want+to+book+a+sports+injury+assessment+at+FlexForward" class="btn-white">WhatsApp Us Now</a>
+    <a href="tel:+919876543210" class="btn-outline-white">Call: +91 98765 43210</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-tag">Find Us</div>
+    <h2 class="section-title">Visit FlexForward Physio</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon" style="font-size:12px;font-weight:700;">LOC</div>
+          <div>
+            <h4>Clinic Address</h4>
+            <p>12, Sports Complex Road, Near Koregaon Park Metro,<br>Pune — 411 001, Maharashtra</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon" style="font-size:12px;font-weight:700;">HRS</div>
+          <div>
+            <h4>Clinic Hours</h4>
+            <p>Monday – Saturday: 7:00 AM – 9:00 PM<br>Sunday: 8:00 AM – 2:00 PM</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon" style="font-size:12px;font-weight:700;">TEL</div>
+          <div>
+            <h4>Contact</h4>
+            <p>Phone: +91 98765 43210<br>WhatsApp: +91 98765 43210</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon" style="font-size:12px;font-weight:700;">INS</div>
+          <div>
+            <h4>Insurance & Payments</h4>
+            <p>Cashless: Star Health, HDFC Ergo, Niva Bupa<br>Also: UPI, Cards, Cash</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="map-placeholder">Google Maps — Koregaon Park, Pune</div>
+        <a href="https://wa.me/919876543210?text=Hi+I+want+to+book+an+appointment" style="display: block; margin-top: 1.5rem; background: #25D366; color: white; padding: 1rem 2rem; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 700; font-size: 1.05rem;">
+           Book via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">Flex<span style="color: white">Forward</span> Physio</span>
+      <p>Pune's specialist sports physiotherapy clinic. 8+ years helping athletes of all levels return to the sport they love — stronger and smarter.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Sports Injury Rehab</a></li>
+        <li><a href="#">Dry Needling</a></li>
+        <li><a href="#">Shockwave Therapy</a></li>
+        <li><a href="#">Return to Sport</a></li>
+        <li><a href="#">Home Visits</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Injuries We Treat</h4>
+      <ul>
+        <li><a href="#">ACL & Knee</a></li>
+        <li><a href="#">Shoulder & Rotator Cuff</a></li>
+        <li><a href="#">Ankle & Foot</a></li>
+        <li><a href="#">Runner's Injuries</a></li>
+        <li><a href="#">Tennis Elbow</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FlexForward Physiotherapy, Pune. All rights reserved.</span>
+    <span>Powered by <strong style="color: var(--orange)">Invictus AI</strong></span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919876543210?text=Hi+I+want+to+book+an+appointment+at+FlexForward+Physio" class="whatsapp-float" title="Chat on WhatsApp">WA</a>
+
+</body>
+</html>

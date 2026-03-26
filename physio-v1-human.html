@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ActiveCare Physiotherapy | Kothrud, Pune — Since 2012</title>
+<meta name="description" content="ActiveCare Physiotherapy in Kothrud, Pune. Dr. Arjun Mehta and team have helped 2,400+ patients recover from sports injuries, back pain, stroke, and post-surgical rehab. Home visits available.">
+<meta name="keywords" content="physiotherapy pune, physiotherapist kothrud, back pain treatment pune, sports physio pune, ACL rehab pune, home physiotherapy pune">
+<meta property="og:title" content="ActiveCare Physiotherapy | Kothrud, Pune">
+<meta property="og:description" content="Pune's most trusted physio clinic — BPT/MPT qualified, NABH accredited, home visits available.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "ActiveCare Physiotherapy Clinic",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd Floor, Suyog Complex, Near Chandni Chowk",
+    "addressLocality": "Kothrud",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411038",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-98765-43210",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "312"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1B4F72;
+    --accent: #2471A3;
+    --warm: #E8D5B7;
+    --cream: #FAF7F2;
+    --text: #1C2833;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+    --white: #ffffff;
+    --green: #1A7A4A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    line-height: 1.65;
+    background: var(--white);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--white);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo-mark {
+    width: 42px;
+    height: 42px;
+    background: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-text h1 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    line-height: 1.1;
+  }
+
+  .logo-text p {
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  .nav-cta {
+    background: var(--primary) !important;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.2px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--accent) !important; }
+
+  /* HERO — editorial, asymmetric layout */
+  .hero {
+    background: var(--cream);
+    padding: 80px 6% 60px;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 80px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    min-height: 520px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--primary);
+    margin-bottom: 22px;
+    font-style: italic;
+  }
+
+  .hero h2 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .hero-lead {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  .hero-callout {
+    background: var(--white);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    max-width: 440px;
+  }
+
+  .hero-callout strong {
+    display: block;
+    font-size: 1.6rem;
+    font-family: 'DM Serif Display', serif;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero-callout span {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: white;
+    padding: 13px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover { background: #145A36; }
+
+  .btn-ghost {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1px;
+    transition: opacity 0.2s;
+  }
+
+  .btn-ghost:hover { opacity: 0.7; }
+
+  /* Hero right — credential stack */
+  .hero-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cred-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .cred-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--cream);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 0.85rem;
+    color: var(--primary);
+    flex-shrink: 0;
+    font-weight: 400;
+  }
+
+  .cred-content strong {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-bottom: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+  }
+
+  .cred-content span {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* PROOF STRIP */
+  .proof-strip {
+    background: var(--primary);
+    color: rgba(255,255,255,0.85);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .proof-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .proof-item strong {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: white;
+    line-height: 1;
+  }
+
+  .proof-item span {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+  }
+
+  /* SERVICES — editorial list, not cards */
+  .section { padding: 72px 6%; }
+  .section-alt { background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+
+  .section-sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 48px;
+    max-width: 520px;
+  }
+
+  /* Two-column service layout — varied sizes, intentional hierarchy */
+  .services-editorial {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 28px;
+  }
+
+  .service-feature {
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+  }
+
+  .service-feature h3 {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .service-feature p {
+    font-size: 0.92rem;
+    opacity: 0.85;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .service-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    align-self: flex-start;
+  }
+
+  .services-secondary {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .service-minor {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px;
+  }
+
+  .service-minor h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  .service-minor p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .services-row2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .service-compact {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 18px;
+  }
+
+  .service-compact h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .service-compact p {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* TEAM */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .team-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .team-photo {
+    height: 180px;
+    background: linear-gradient(160deg, #D6E8F5, #EBF4FB);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .team-monogram {
+    width: 72px;
+    height: 72px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+  }
+
+  .team-info {
+    padding: 22px;
+  }
+
+  .team-info h3 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  .team-qual {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 6px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .team-spec {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .team-years {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--cream);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* RECOVERY STORIES */
+  .stories-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .story-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+  }
+
+  .story-card:first-child {
+    border-left: 3px solid var(--accent);
+  }
+
+  .story-context {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .story-outcome {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .outcome-val {
+    text-align: center;
+  }
+
+  .outcome-val .num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary);
+    display: block;
+    line-height: 1;
+  }
+
+  .outcome-val .lbl {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .outcome-arrow {
+    font-size: 1.1rem;
+    color: var(--muted);
+  }
+
+  .outcome-result {
+    margin-left: auto;
+    background: #ECFDF5;
+    border: 1px solid #6EE7B7;
+    color: var(--green);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .story-quote {
+    font-size: 0.88rem;
+    color: var(--text);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+
+  .story-cite {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* REVIEW BAR */
+  .review-bar {
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .review-score {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .review-score .score-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    line-height: 1;
+  }
+
+  .review-score .score-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .review-stars {
+    color: #F59E0B;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .review-count {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .review-quote {
+    font-size: 0.88rem;
+    color: var(--text);
+    font-style: italic;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* BOOKING */
+  .booking {
+    background: var(--primary);
+    padding: 70px 6%;
+    text-align: center;
+    color: white;
+  }
+
+  .booking h2 {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+  }
+
+  .booking p {
+    font-size: 1rem;
+    opacity: 0.85;
+    max-width: 480px;
+    margin: 0 auto 36px;
+    line-height: 1.65;
+  }
+
+  .booking-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .bk-btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .bk-btn.wa {
+    background: #25D366;
+    color: white;
+  }
+
+  .bk-btn.wa:hover { background: #20B858; }
+
+  .bk-btn.phone {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.45);
+  }
+
+  .bk-btn.phone:hover { background: rgba(255,255,255,0.22); }
+
+  .booking-footnote {
+    margin-top: 22px;
+    font-size: 0.82rem;
+    opacity: 0.65;
+    line-height: 1.7;
+  }
+
+  /* LOCATION */
+  .location-section {
+    padding: 72px 6%;
+    background: var(--white);
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  .loc-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .loc-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .loc-content strong {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .loc-content span {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .map-block {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 60px 6%;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-grid {
+    max-width: 820px;
+    margin: 36px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    padding: 18px 22px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .faq-answer {
+    padding: 0 22px 18px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.75);
+    padding: 48px 6% 28px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
+  }
+
+  .footer-grid h4 {
+    color: white;
+    font-size: 0.92rem;
+    margin-bottom: 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+  }
+
+  .footer-grid p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .footer-grid ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .footer-grid ul a {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-grid ul a:hover { color: white; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; padding: 40px 5%; gap: 40px; }
+    .hero h2 { font-size: 2.1rem; }
+    .hero-credentials { display: none; }
+    .services-editorial { grid-template-columns: 1fr; }
+    .services-row2 { grid-template-columns: 1fr 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    .stories-grid { grid-template-columns: 1fr; }
+    .location-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .proof-strip { gap: 30px; }
+    nav { padding: 14px 5%; }
+    .nav-links { display: none; }
+  }
+</style>
+<link rel="canonical" href="https://invictus-ai.in/physio/activecare">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark">AC</div>
+    <div class="logo-text">
+      <h1>ActiveCare Physio</h1>
+      <p>Kothrud, Pune &#183; Est. 2012</p>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Treatments</a></li>
+    <li><a href="#team">Our Team</a></li>
+    <li><a href="#stories">Results</a></li>
+    <li><a href="#location">Visit Us</a></li>
+    <li><a href="https://wa.me/919876543210" class="nav-cta">Schedule Appointment</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <p class="hero-eyebrow">BPT &#183; MPT Certified &#183; NABH Accredited</p>
+    <h2>Kothrud's Most Trusted<br><em>Physiotherapy Clinic</em><br>Since 2012</h2>
+    <p class="hero-lead">Dr. Arjun Mehta and team have helped over 2,400 Pune families recover from injuries, surgeries, and chronic pain. Evidence-based. Honest timelines. Home visits available.</p>
+    <div class="hero-callout">
+      <strong>2,400+</strong>
+      <span>Patients recovered in Kothrud, Bavdhan, Aundh, and surrounding areas since 2012</span>
+    </div>
+    <div class="hero-cta-row">
+      <a href="https://wa.me/919876543210?text=Hi%2C%20I'd%20like%20to%20book%20a%20physio%20consultation" class="btn-primary">
+        &#8599; Book via WhatsApp
+      </a>
+      <a href="tel:+919876543210" class="btn-ghost">Call +91 98765 43210</a>
+    </div>
+  </div>
+  <div class="hero-credentials">
+    <div class="cred-card">
+      <div class="cred-icon">BPT</div>
+      <div class="cred-content">
+        <strong>Clinically Qualified Team</strong>
+        <span>All physiotherapists hold BPT or MPT degrees from recognized universities. No diploma-only practitioners.</span>
+      </div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-icon">NABH</div>
+      <div class="cred-content">
+        <strong>NABH Accredited Clinic</strong>
+        <span>One of few physio clinics in Kothrud with full NABH accreditation. Rigorous protocols, documented outcomes.</span>
+      </div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-icon">4.9</div>
+      <div class="cred-content">
+        <strong>4.9&#47;5 on Google &#40;312 reviews&#41;</strong>
+        <span>Real patients in Pune. Not aggregated from other platforms. Updated weekly.</span>
+      </div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-icon">&#8962;</div>
+      <div class="cred-content">
+        <strong>Home Visits Available</strong>
+        <span>For elderly, post-surgical, and mobility-limited patients across Kothrud, Bavdhan, Shivajinagar.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-item">
+    <strong>2,400+</strong>
+    <span>Patients Treated</span>
+  </div>
+  <div class="proof-item">
+    <strong>13 yrs</strong>
+    <span>In Kothrud</span>
+  </div>
+  <div class="proof-item">
+    <strong>4.9&#47;5</strong>
+    <span>Google Rating</span>
+  </div>
+  <div class="proof-item">
+    <strong>3</strong>
+    <span>Specialist Physios</span>
+  </div>
+  <div class="proof-item">
+    <strong>NABH</strong>
+    <span>Accredited</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <p class="section-label">Treatments &amp; Specializations</p>
+  <h2 class="section-title">What We Treat</h2>
+  <p class="section-sub">Most physio clinics treat everything. We're particularly known for sports rehab, orthopedic recovery, and complex neurological cases.</p>
+
+  <div class="services-editorial">
+    <div class="service-feature">
+      <div>
+        <h3>Sports Injury &amp; Orthopedic Rehab</h3>
+        <p>ACL tears, rotator cuff injuries, knee replacements, spinal disc issues, frozen shoulder. Dr. Mehta specializes in return-to-sport protocols — his 28-year-old patient returned to football in 14 weeks post-ACL reconstruction, when other clinics quoted 6 months.</p>
+      </div>
+      <span class="service-tag">Most Requested</span>
+    </div>
+    <div class="services-secondary">
+      <div class="service-minor">
+        <h3>Neurological Rehabilitation</h3>
+        <p>Stroke recovery, Parkinson's, Cerebral Palsy, and spinal cord injuries. Dr. Kulkarni's 62-year-old stroke patient regained independent walking in 6 months.</p>
+      </div>
+      <div class="service-minor">
+        <h3>Post-Surgical Recovery</h3>
+        <p>Joint replacements, arthroscopy, spine surgery. Structured protocols starting day 2 post-op for faster recovery.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-row2">
+    <div class="service-compact">
+      <h4>Geriatric Physio</h4>
+      <p>Fall prevention, balance, osteoporosis. Home visits for seniors.</p>
+    </div>
+    <div class="service-compact">
+      <h4>Women's Health</h4>
+      <p>Prenatal, postnatal, pelvic floor rehab. Female physiotherapist available.</p>
+    </div>
+    <div class="service-compact">
+      <h4>Chronic Pain</h4>
+      <p>Back, neck, knee pain that hasn't responded to medication alone.</p>
+    </div>
+    <div class="service-compact">
+      <h4>Home Physiotherapy</h4>
+      <p>Full equipment kit. Kothrud, Bavdhan, Shivajinagar, Aundh areas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section section-alt" id="team">
+  <p class="section-label">Our Physiotherapists</p>
+  <h2 class="section-title">The People Behind Your Recovery</h2>
+  <p class="section-sub">Three senior physiotherapists. Between them, 32 years of clinical experience in Pune.</p>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-photo">
+        <div class="team-monogram">AM</div>
+      </div>
+      <div class="team-info">
+        <h3>Dr. Arjun Mehta</h3>
+        <div class="team-qual">BPT, MPT (Orthopedics)</div>
+        <p class="team-spec">Sports injury and orthopedic rehabilitation. 14 years experience. Completed advanced manual therapy certification from Manipal, 2016.</p>
+        <span class="team-years">14 Years Experience</span>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">
+        <div class="team-monogram">PK</div>
+      </div>
+      <div class="team-info">
+        <h3>Dr. Priya Kulkarni</h3>
+        <div class="team-qual">BPT, MPT (Neurology), MSPT</div>
+        <p class="team-spec">Neurological rehab and women's health. 10 years. Senior physio for stroke, Parkinson's, and post-partum recovery.</p>
+        <span class="team-years">10 Years Experience</span>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">
+        <div class="team-monogram">VJ</div>
+      </div>
+      <div class="team-info">
+        <h3>Dr. Vikram Joshi</h3>
+        <div class="team-qual">BPT, Certified Manual Therapist</div>
+        <p class="team-spec">Post-surgical rehab and geriatric care. 8 years. Handles home visits personally for complex post-operative cases.</p>
+        <span class="team-years">8 Years Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOVERY STORIES -->
+<section class="section" id="stories">
+  <p class="section-label">Patient Outcomes</p>
+  <h2 class="section-title">Measured Results, Not Just Testimonials</h2>
+  <p class="section-sub">We document outcomes. These are real cases from our Kothrud clinic — specific numbers, not rounded estimates.</p>
+
+  <div class="stories-grid">
+    <div class="story-card">
+      <p class="story-context">Post ACL Surgery &#8212; 28-year-old, Software Engineer</p>
+      <div class="story-outcome">
+        <div class="outcome-val">
+          <span class="num">40&#176;</span>
+          <span class="lbl">ROM at Start</span>
+        </div>
+        <span class="outcome-arrow">&#8594;</span>
+        <div class="outcome-val">
+          <span class="num">135&#176;</span>
+          <span class="lbl">Week 12</span>
+        </div>
+        <div class="outcome-result">Returned<br>to Sport</div>
+      </div>
+      <p class="story-quote">&#8220;I was told I wouldn&#8217;t play football again. Dr. Mehta got me back on the field in 14 weeks. He was honest about the timeline from day one.&#8221;</p>
+      <p class="story-cite">&#8212; Rahul S., Kothrud</p>
+    </div>
+    <div class="story-card">
+      <p class="story-context">Stroke Rehabilitation &#8212; 62-year-old, housewife</p>
+      <div class="story-outcome">
+        <div class="outcome-val">
+          <span class="num">30%</span>
+          <span class="lbl">Mobility Score</span>
+        </div>
+        <span class="outcome-arrow">&#8594;</span>
+        <div class="outcome-val">
+          <span class="num">85%</span>
+          <span class="lbl">Month 6</span>
+        </div>
+        <div class="outcome-result">Independent<br>Walking</div>
+      </div>
+      <p class="story-quote">&#8220;My mother walks to the vegetable market on her own now. Six months ago we didn&#8217;t think that was possible. Dr. Kulkarni never gave up.&#8221;</p>
+      <p class="story-cite">&#8212; Daughter of Mrs. Desai, Bavdhan</p>
+    </div>
+    <div class="story-card">
+      <p class="story-context">Knee Replacement Rehab &#8212; 58-year-old, retired bank manager</p>
+      <div class="story-outcome">
+        <div class="outcome-val">
+          <span class="num">7/10</span>
+          <span class="lbl">Pain Score</span>
+        </div>
+        <span class="outcome-arrow">&#8594;</span>
+        <div class="outcome-val">
+          <span class="num">1/10</span>
+          <span class="lbl">Week 8</span>
+        </div>
+        <div class="outcome-result">Full<br>Recovery</div>
+      </div>
+      <p class="story-quote">&#8220;My surgeon told me recovery would take 6 months minimum. ActiveCare had me walking unaided in 8 weeks. The daily protocol made all the difference.&#8221;</p>
+      <p class="story-cite">&#8212; Suresh M., Aundh</p>
+    </div>
+    <div class="story-card">
+      <p class="story-context">Chronic Lower Back Pain &#8212; 35-year-old, IT professional</p>
+      <div class="story-outcome">
+        <div class="outcome-val">
+          <span class="num">8/10</span>
+          <span class="lbl">Daily Pain</span>
+        </div>
+        <span class="outcome-arrow">&#8594;</span>
+        <div class="outcome-val">
+          <span class="num">1/10</span>
+          <span class="lbl">Session 6</span>
+        </div>
+        <div class="outcome-result">Pain-Free<br>at Desk</div>
+      </div>
+      <p class="story-quote">&#8220;I was taking three Combiflam a day for eight months. After six sessions with Dr. Kulkarni, I haven&#8217;t needed a single one.&#8221;</p>
+      <p class="story-cite">&#8212; Anita P., Kothrud</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW BAR -->
+<div class="review-bar">
+  <div class="review-score">
+    <span class="score-num">4.9</span>
+    <div class="score-meta">
+      <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="review-count">312 Google Reviews &#183; Kothrud</span>
+    </div>
+  </div>
+  <p class="review-quote">
+    &#8220;If you have any musculoskeletal issue, this is the place. The team is evidence-based and genuinely cares about outcomes, not just filling appointment slots.&#8221;
+    <strong style="display:block; margin-top:6px; font-style:normal;">&#8212; Anand K., Shivajinagar</strong>
+  </p>
+</div>
+
+<!-- BOOKING CTA -->
+<section class="booking">
+  <h2>Ready to Start Your Recovery?</h2>
+  <p>Most patients see measurable improvement within 3&#8211;5 sessions. Book a 60-minute initial assessment and we'll give you an honest picture of what to expect.</p>
+  <div class="booking-buttons">
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I'd%20like%20to%20book%20a%20physio%20assessment%20at%20ActiveCare" class="bk-btn wa">
+      Book via WhatsApp
+    </a>
+    <a href="tel:+919876543210" class="bk-btn phone">
+      Call +91 98765 43210
+    </a>
+  </div>
+  <p class="booking-footnote">
+    Home visits available &#183; Same-day appointments most days &#183; Insurance documentation provided<br>
+    Kothrud clinic: 8:00 AM&#8211;8:00 PM Mon&#8211;Sat &#183; 9:00 AM&#8211;2:00 PM Sun
+  </p>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section" id="location">
+  <p class="section-label">Find Us</p>
+  <h2 class="section-title">Visit Our Clinic</h2>
+
+  <div class="location-grid">
+    <div>
+      <div class="loc-item">
+        <div class="loc-icon">&#x1F4CD;</div>
+        <div class="loc-content">
+          <strong>Address</strong>
+          <span>2nd Floor, Suyog Complex, Near Chandni Chowk<br>Kothrud, Pune &#8211; 411038</span>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">&#x23F0;</div>
+        <div class="loc-content">
+          <strong>Hours</strong>
+          <span>Mon&#8211;Sat: 8:00 AM &#8211; 8:00 PM<br>Sunday: 9:00 AM &#8211; 2:00 PM</span>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">&#x260E;</div>
+        <div class="loc-content">
+          <strong>Phone &amp; WhatsApp</strong>
+          <span>+91 98765 43210</span>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">&#x2709;</div>
+        <div class="loc-content">
+          <strong>Email</strong>
+          <span>activecare@example.com</span>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">&#x1F3E0;</div>
+        <div class="loc-content">
+          <strong>Home Visit Coverage</strong>
+          <span>Kothrud, Bavdhan, Shivajinagar, Aundh, Baner, Karve Nagar</span>
+        </div>
+      </div>
+    </div>
+    <div class="map-block">
+      <span style="font-size:1.8rem;">&#x1F5FA;</span>
+      <span>Suyog Complex, Chandni Chowk<br>Kothrud, Pune 411038</span>
+      <a href="https://maps.google.com" style="color:var(--accent);font-size:0.82rem;font-weight:600;text-decoration:none;">Open in Google Maps &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <p class="section-label" style="text-align:center;">Common Questions</p>
+  <h2 class="section-title" style="text-align:center;max-width:600px;margin:0 auto 8px;">What People Usually Ask Before Booking</h2>
+
+  <div class="faq-grid">
+    <details class="faq-item">
+      <summary>Do I need a doctor's referral to come in?</summary>
+      <p class="faq-answer">No referral needed for most musculoskeletal conditions. Walk in or WhatsApp us directly. For post-surgical cases, please bring your operative notes and surgeon's clearance so we can plan the right protocol from session one.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How many sessions will I realistically need?</summary>
+      <p class="faq-answer">We'll give you an honest estimate at the initial assessment. Acute sports injuries: typically 4&#8211;8 sessions. Chronic conditions: 8&#8211;16 sessions. Post-surgical rehab: 12&#8211;20 sessions. We don't pad session counts &#8212; our Google reviews reflect that.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Are home visits available? Which areas?</summary>
+      <p class="faq-answer">Yes. We cover Kothrud, Bavdhan, Shivajinagar, Aundh, Baner, and Karve Nagar. Dr. Vikram handles most home visits personally with a fully equipped kit. WhatsApp us to check availability for your area.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you accept health insurance?</summary>
+      <p class="faq-answer">Many health insurance providers reimburse physiotherapy. We provide detailed clinical receipts and documentation formatted for TPA claims. Our front desk team will help you with the paperwork.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What should I bring to my first appointment?</summary>
+      <p class="faq-answer">Any relevant X-rays, MRI reports, or discharge summaries. Comfortable clothing that allows access to the affected area. If you have a referral from a doctor, bring that too &#8212; but it's not required.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>ActiveCare Physiotherapy Clinic</h4>
+      <p>BPT/MPT qualified physiotherapists in Kothrud, Pune. NABH accredited. Treating sports injuries, orthopedic conditions, neurological rehab, and chronic pain since 2012. Home visits available across Kothrud and nearby areas.</p>
+    </div>
+    <div>
+      <h4>Treatments</h4>
+      <ul>
+        <li><a href="#">Sports Injury Rehab</a></li>
+        <li><a href="#">Orthopedic Physiotherapy</a></li>
+        <li><a href="#">Neurological Rehabilitation</a></li>
+        <li><a href="#">Post-Surgical Recovery</a></li>
+        <li><a href="#">Geriatric Physiotherapy</a></li>
+        <li><a href="#">Women&#8217;s Health Physio</a></li>
+        <li><a href="#">Home Physiotherapy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://maps.google.com">Kothrud, Pune &#8211; 411038</a></li>
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="https://wa.me/919876543210">WhatsApp</a></li>
+        <li><a href="https://g.page/r/activecare-physio">Google Reviews</a></li>
+        <li><a href="https://www.justdial.com">Justdial Listing</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2024 ActiveCare Physiotherapy Clinic, Kothrud, Pune</span>
+    <span>Built by <a href="https://invictus-ai.in" style="color:rgba(255,255,255,0.4);text-decoration:none;">Invictus AI</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
